@@ -19,8 +19,8 @@ pipeline {
        }
        post {
         always {
-           // emailext body: '${env.BUILD_URL} has result ${currentBuild.result}', subject: 'test email', to: 'shipratrivedi1234p@gmail.com'
-            mail to: 'shipratrivedi1234p@gmail.com',
+           // emailext body: '${env.BUILD_URL} has result ${currentBuild.result}', subject: 'test email', to: 'shipratrivedi1234@gmail.com'
+            mail to: 'shipratrivedi1234@gmail.com',
           subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
           body: "${env.BUILD_URL} has result ${currentBuild.result}"
         }
